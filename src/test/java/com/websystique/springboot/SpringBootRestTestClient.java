@@ -33,7 +33,7 @@ public class SpringBootRestTestClient {
     private static void getUser(){
         System.out.println("Testing getUser API----------");
         RestTemplate restTemplate = new RestTemplate();
-        User user = restTemplate.getForObject(REST_SERVICE_URI+"/user/1", User.class);
+        User user = restTemplate.getForObject(REST_SERVICE_URI+"/user/2", User.class);
         System.out.println(user);
     }
      
@@ -51,7 +51,7 @@ public class SpringBootRestTestClient {
         System.out.println("Testing update User API----------");
         RestTemplate restTemplate = new RestTemplate();
         User user  = new User(1,"Tomy",33, 70000);
-        restTemplate.put(REST_SERVICE_URI+"/user/1", user);
+        restTemplate.put(REST_SERVICE_URI+"/user/2", user);
         System.out.println(user);
     }
  
